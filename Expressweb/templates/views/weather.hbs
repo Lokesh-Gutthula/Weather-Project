@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{{>headerlinks}}
+	<style>
+	    input:focus {
+	      outline: none !important;
+	      box-shadow: none !important;
+	      /* Optional: You can also set other styles here to customize the appearance of the focused input field */
+	    }
+  </style>
+</head>
+<body>
+	{{>navbar}}
+	<div class="container ">
+		<div class="row py-5 ">
+			<div class="col-lg-12 col-md-10 d-flex justify-content-center">
+				<form class="bg-dark rounded-pill d-flex p-1" style="width: 40rem">
+					<input type="text" name="" class="ms-3 flex-fill border-0 text-light bg-dark"  placeholder="Enter your city name" id="city">
+					<input type="submit" name="" value="search" id="submit" class="rounded-pill py-2 px-4 ">
+				</form>
+			</div>
+		</div>
+		<div class="d-flex justify-content-center">
+			<div class="temp_info " style="width:25rem">
+				<div class="top_layer bg-dark text-light d-flex justify-content-between px-3 p-3 align-items-center border border-info">
+					<span id="day">Sunday</span>
+					<span id="date">1 Jan</span>
+				</div>
+				<div class="bg-dark collapsing" style="height: 15rem; ">
+					<p class="text-muted p-3" id="msg">Get Output Here</p>
+					<p id="desc" class="text-light text-capitalize fs-5 mx-3 my-0"></p>
+					<div class="data_hide d-flex justify-content-around text-light p-3" style="font-size: 4.5rem;height: 12rem;" id="hide">
+						<p><span id="temp" class="display-2"></p>
+						<p id="temp_status"><i class="fa fa-cloud"></i></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<script src="js/main.js"></script>
+	<script>
+  	// i forgot this is bcs still document completely not loaded.
+  	const arr = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+  	const date = new Date();
+  	document.getElementById("day").innerText = arr[date.getDay()];
+	const monthName = date.toLocaleString('default', { month: 'long' });
+  	document.getElementById("date").innerText = date.getMonth()+" "+ monthName;
+  </script>
+</body>
+</html>

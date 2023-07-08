@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,200;1,300&family=Piazzolla:wght@300;400;500;900&display=swap');
+
+
+
+*{
+	margin : 0;
+	padding:0;
+	box-sizing: border-box;
+	font-family: "Piazzolla", serif;
+}
+
+:root{
+	--main-bg: #1e272e;
+	--main-color: #0097e6;
+}
+.navbar a{
+	color: white;
+/*	font-size: 1.8rem;*/
+}
+.navbar a:hover{
+	color: var(--main-color);
+}
+
+figure img{
+	filter: drop-shadow(0 0.5rem 1rem rgba(0, 0, 0, 0.3));
+}
+
+
+.data_hide{
+	visibility: hidden;
+	transition: all 0.3s linear;
+}
+
+::placeholder{
+	color: #bfc1c8;
+}
+
+input[type="submit"]:hover{
+	background: lightgreen;
+	color: blue;
+}
+
